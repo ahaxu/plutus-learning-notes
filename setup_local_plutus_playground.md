@@ -37,3 +37,67 @@ npm run start
 ```
 
 Then, there you go 🚀
+
+
+### Setup dev environment on Ubuntu 20.04 LTS
+
+0. Prerequisites:
+
+Install nix, npm, cabal.
+Make sure that your nix profile is sourced every time you open a new terminal, by adding this line to your ~/.bashrc file:
+source ~/.nix-profile/etc/profile.d/nix.sh
+
+1. Clone repo & checkout correct revision
+
+```
+git clone https://github.com/input-output-hk/plutus.git
+cd plutus
+git checkout -b pioneer 3746610e53654a1167aeb4c6294c6096d16b0502
+```
+
+2. Setup IOHK binary cache
+
+see README.adoc at root of plutus repo:
+
+. On non-NixOS, edit `/etc/nix/nix.conf` and add the following lines:
+
+```
+substituters        = https://hydra.iohk.io https://iohk.cachix.org https://cache.nixos.org/
+trusted-public-keys = hydra.iohk.io:f/Ea+s+dFdN+3Y/G+FDgSq+a5NEWhJGzdjvKNGv0/EQ= iohk.cachix.org-1:DpRUyj7h7V830dp/i6Nti+NEO2/nhblbov/8MW7Rqoo= cache.nixos.org-1:6NCHdD59X431o0gWypbMrAURkbJ16ZPMQFGspcDShjY=
+```
+
+3. Build plutus and plutus-playground
+
+```
+cd plutus
+nix-shell
+nix-build -A plutus
+nix-build -A plutus-playground
+```
+
+4. Start plutus-playground-server
+```
+cd plutus-playground-client
+plutus-playground-generate-purs
+plutus-playground-server
+```
+
+5. Start plutus-playground frontend
+
+Open another terminal
+```
+cd plutus
+nix-shell
+cd plutus-playground-client
+npm run start
+```
+
+Wait until you see 'wdm: Compile successfully.'
+
+6. Enjoy the plutus & playground:
+
+Open a web browser at
+https://localhost:8009/
+
+You should see the demo files: Hello world, Starter, Game, etc.
+You should be able to compile and simulate them.
