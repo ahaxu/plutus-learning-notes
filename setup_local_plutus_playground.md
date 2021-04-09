@@ -9,6 +9,8 @@ npm install -g purescript
 npm install -g spago
 ```
 
+#### Follow steps below
+
 1. Clone plutus repo
 
 `git clone https://github.com/input-output-hk/plutus`
