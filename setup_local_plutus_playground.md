@@ -24,7 +24,7 @@ npm install -g spago
 
 2. from plutus root dir
 ```
-cd plutus-playground-client
+# stack clean --full # optional setp incase we might need to clean up stack local cache
 stack build plutus-playground-server
 stack exec -- plutus-playground-server psgenerator ./plutus-playground-client/generated
 stack exec -- plutus-playground-server webserver 
@@ -42,6 +42,29 @@ nix-shell
 cd plutus-playground-client/
 npm run start
 ```
+
+in case error like this
+```
+Error 35 of 36:
+
+  at src/plutus-playground-client/generated/Wallet/Rollup/Types.purs:2:1 - 25:15 (line 2, column 1 - line 25, column 15)
+
+    Module Wallet.Rollup.Types has been defined multiple times
+
+
+  See https://github.com/purescript/documentation/blob/master/errors/DuplicateModule.md for more information,
+  or to contribute content related to this error.
+
+Error 36 of 36:
+...
+```
+
+Run
+```
+rm -rf src/plutus-playground-client/generated/
+```
+then `npm run start` again
+
 
 Then, there you go 🚀
 
