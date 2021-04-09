@@ -1,3 +1,10 @@
+## Setup local plutus playground
+
+This guide cotains 2 guides:
+
+- local plutus playground on fedora 32
+- local plutus playground on ubuntu 20 (noted by [https://twitter.com/DangQuanNguyen](https://twitter.com/DangQuanNguyen))
+
 ### Local plutus playground on Fedora 32
 
 Need to install nodejs, npm first
