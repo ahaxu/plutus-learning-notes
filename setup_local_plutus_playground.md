@@ -1,9 +1,8 @@
 ### Local plutus playground on Fedora 32
 
-#### Need to install nodejs, npm first
+Need to install nodejs, npm first
 
-we may got this error with eaccess permissions errors when installing packages globally - link https://docs.npmjs.com/resolving-eacces-permissions-errors-when-installing-packages-globally
-and, need to install purescript and spago
+We may got this error with eaccess permissions errors when installing packages globally - [link](https://docs.npmjs.com/resolving-eacces-permissions-errors-when-installing-packages-globally), and need to install *purescript* and *spago*
 
 ```
 npm install -g purescript
