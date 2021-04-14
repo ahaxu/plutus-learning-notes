@@ -6,7 +6,7 @@ COPY . /home/installer/src
 
 RUN \
     apt update && \
-    apt upgrade && \
+    apt upgrade -y && \
     apt-get install gzip && \
     apt-get install xz-utils && \
     apt-get install gnupg2 -y && \
