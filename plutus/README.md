@@ -20,6 +20,8 @@ installer@396ff5e9de23:~/src$ make begin
 ### Starting the backend server
 
 ```bash
+$ cd project_path
+$ docker-compose exec plutus-origin bash
 installer@396ff5e9de23:~/src$ make start-server
 [nix-shell:~/src/plutus]$ cd /home/installer/src/plutus/plutus-pab && plutus-pab-generate-purs
 [nix-shell:~/src/plutus]$ cd /home/installer/src/plutus/plutus-playground-server && plutus-playground-generate-purs
