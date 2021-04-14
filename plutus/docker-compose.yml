@@ -1,0 +1,10 @@
+version: '3'
+services:
+  plutus-origin:
+    container_name: plutus-origin
+    build: .
+    ports:
+      - "8089:8009"
+    volumes:
+      - .:/home/installer/src
+    tty: true
