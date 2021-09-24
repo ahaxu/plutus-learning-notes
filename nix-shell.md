@@ -1,5 +1,5 @@
 ### Start your local plutus playground
-Github repo of plutus pioneer [program](https://github.com/input-output-hk/plutus-pioneer-program)
+Github repo of plutus [pioneer program](https://github.com/input-output-hk/plutus-pioneer-program)
 
 #### For week01 to week03 you need to start local playground
 
