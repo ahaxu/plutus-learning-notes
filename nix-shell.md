@@ -5,23 +5,30 @@ Github repo of plutus pioneer [program](https://github.com/input-output-hk/plutu
 
 1. copy git tag `ea0ca4e9f9821a9dbfc5255fa0f42b6f2b3887c4` from ~/plutus-pioneer-program/week-xy/cabal.project
 ![](./diagrams/plutus-pioneer-program-git-tag.png)
-
-2. git checkout $git_tag_above, for eg
+2. git checkout ${git_tag_above}, for eg:
 `git checkout ea0ca4e9f9821a9dbfc5255fa0f42b6f2b3887c4`
-3. turn nix shell on `nix-shell`
+3. turn nix shell on
+```
+# assume that you are at ~/plutus-pioneer-program/week01/
+nix-shell
+```
 4. start plutus playground server
 ```
+# assume that you are at ~/plutus-pioneer-program/week01/
 cd plutus-playground-client/
 ./plutus-playground-server
 ```
 5. start plutus playground cliennt
 ```
+# assume that you are at ~/plutus-pioneer-program/week01/
 cd plutus-playground-client/
 npm run start
 ```
-you can view plutus playground client at https://localhost:8009
+now, you can view plutus playground client at https://localhost:8009
+
 6. if any error related to npm packages
 ```
+# assume that you are at ~/plutus-pioneer-program/week01/plutus-playground-client/
 rm -rf node_modules/
 npm install --save-dev webpack
 npm install --save-dev webpack-cli
