@@ -35,9 +35,15 @@ npm install --save-dev webpack-cli
 ```
 
 #### From  week04 to week10
-
-Just need `cd` to week you wanna learn
-then run
+Start in nixshell
 ```
-cabal repl -v
+# assume that you are at ~/plutus
+nix-shell
+```
+then cd to the week you wanna learn, for eg `~/plutus-pioneer-program/code/week05/`
+
+```
+[nix-shell:~]$ cd ~/plutus-pioneer-program/code/week05/
+[nix-shell:~/plutus-pioneer-program/code/week05]$ cabal repl -v
+
 ```
