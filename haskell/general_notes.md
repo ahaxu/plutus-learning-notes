@@ -20,14 +20,22 @@ map
 Laws
     - todo
 
+Minimal function need to implement:
+```
 pure
-<****>
-f <$> Student <*> firstname <*> lastname
+<*>
+```
+
+```
+Student <$> firstname <*> lastname
+liftA2 Student firstname lastname
+```
 
 ## Monad
 Laws
     - todo
 
+Minimal function need to implement:
 ```
 return
 >>= :: join fmap
@@ -39,8 +47,6 @@ Either Monad -- exception handler
 (->) and Reader Monad -- waiting for input from env
 State Monad -- memoize data
 Writer Monad 
-
-
 
 ## Compose
 Compose f g a
