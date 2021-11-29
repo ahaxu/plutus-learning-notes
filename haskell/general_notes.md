@@ -56,21 +56,28 @@ Monad
 
 ## Monad transformer
 
+#### Why we need monad transformers
+
 Because monad can't compose
+
+```
 f g ( f (g b)) --> f (g b) --> join fmap ??
+```
+Only if we have a function like on swap :: m (n s) --> n (m s)
 
-only if we have a function like on swap :: m (n s) --> n (m s)
+Refer document: http://web.cecs.pdx.edu/~mpj/pubs/RR-1004.pdf
 
-refer document: http://web.cecs.pdx.edu/~mpj/pubs/RR-1004.pdf
+#### Common Monad transformers
 
-IndentityT
-MaybeT
-ReaderT
-EitherT
-StateT
+- IndentityT
+- MaybeT
+- ReaderT
+- EitherT
+- StateT
 
-Videos and article
+#### Videos and article
 
-    - [Adam McCullough - Monad Transformers for the Easily Confused - λC 2018](https://www.youtube.com/watch?v=SMj-n2f7wYY&t=1583s)
-    - [Monad Transformers - Ben Kolera](https://www.youtube.com/watch?v=pzouxmWiemg)
-    - [mmhaskell monads transformers](https://mmhaskell.com/monads/transformers)
+- [Adam McCullough - Monad Transformers for the Easily Confused - λC 2018](https://www.youtube.com/watch?v=SMj-n2f7wYY&t=1583s)
+- [Monad Transformers - Ben Kolera](https://www.youtube.com/watch?v=pzouxmWiemg)
+- [mmhaskell monads transformers](https://mmhaskell.com/monads/transformers)
+
