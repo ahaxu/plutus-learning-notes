@@ -28,9 +28,11 @@ f <$> Student <*> firstname <*> lastname
 Laws
     - todo
 
+```
 return
 >>= :: join fmap
 =<< :: flip (>>=)
+```
 
 Maybe Monad -- computation can be fail
 Either Monad -- exception handler
@@ -62,6 +64,7 @@ EitherT
 StateT
 
 Videos and article
+
     - [Adam McCullough - Monad Transformers for the Easily Confused - λC 2018](https://www.youtube.com/watch?v=SMj-n2f7wYY&t=1583s)
     - [Monad Transformers - Ben Kolera](https://www.youtube.com/watch?v=pzouxmWiemg)
     - [mmhaskell monads transformers](https://mmhaskell.com/monads/transformers)
